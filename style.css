@@ -1,0 +1,160 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:root{
+    --bg-yellow: hsl(47, 88%, 63%);
+    --bg-white: hsl(0, 0%, 100%);
+    --primary-black: hsl(0, 0%, 7%);
+    --secondary-gray: hsl(0, 0%, 50%);
+    --corner-radius: 0.75rem;
+}
+
+/* End CSS Reset */
+
+body{
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--bg-yellow);
+    color: var(--primary-black);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.illustration-img{
+    
+    width: 21.125rem;
+    height: 12.5rem;
+    border-radius: var(--corner-radius);
+}
+
+.card{
+    height: 29.625rem; /* 522px */
+    width: 21.25rem; /* 384px */
+    background-color: var(--bg-white);
+    padding: 1.5rem;
+    border-radius: var(--corner-radius);
+    box-shadow: 10px 10px 2px black; 
+}
+
+.card-title{
+    margin: 0.75rem 0;
+    font-size: 1.5rem;
+    font-weight: 900;
+    transition: color 0.2s ease; 
+}
+
+.card-title:hover{
+    color: var(--bg-yellow);
+    cursor: pointer;
+}
+
+.card-category{
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    display: inline-block;
+    font-weight: 500;
+    padding: 8px 12px;
+    background-color: var(--bg-yellow);
+    border-radius: 8px;
+}
+
+.card-description{
+    color: var(--secondary-gray);
+    line-height: 1.5;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding-bottom: 1.5rem;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+   
+}
+
+
+
+.user-pic{
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+.user-text{
+    font-size: 0.875rem;
+    font-weight: 900;
+}
+
+.attribution{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+
+
+@media (max-width: 375px){
+    .card{
+        height: 27.3125rem; /* 522px 24px either side*/
+        width: 17.6875rem; /* 384px */
+    }
+
+    .illustration-img{
+        width: 17.4375rem;
+        /* 279 px */
+        height: 10.5rem;
+    }
+
+
+   
+} 
